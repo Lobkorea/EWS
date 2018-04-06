@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EWS</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/datepicker3.css">
+    <link rel="stylesheet" href="css/common.css">
+    
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/fontawsome.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/ews.js"></script>
+</head>
+<body>
+
+<!-- top header S -->
+<section id="id-top" class="class-hdWrap">
+    <header id="id-header" class="class-header class-clearfix">
+        <h1 id="id-title" class="class-title">EWS</h1>
+
+        <div class="class-lineSelect class-clearfix">
+            <div class="class-lineSim">
+                <span>LINE</span>
+                <select>
+                    <option value="sanken_sim">Sanken SIM</option>
+                </select>
+            </div>
+            <div class="class-lineMachine">
+                <span>LOCATION</span>
+                <select>
+                    <option value="all">ALL</option>
+                </select>
+            </div>
+            <div class="class-searchTray">
+                <form id="id-trayID">
+                    <input type="text" class="class-trayID">
+                    <button type="submit" form="id-trayID" class="class-btnTrayID">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="class-langTime class-clearfix">
+            <select>
+                <option value="english">ENGLISH</option>
+            </select>
+            <p>
+                <span class="class-day">2017-11-13</span>
+                <span class="class-time">20&#58;47&#58;23</span>
+            </p>
+        </div>
+        
+        <!-- tray ID search pop-up S -->
+        <div class="class-searchPOP">
+            <div class="class-searchInner">
+                <h4>Search Tray ID</h4>
+                
+                <ul class="class-selectWrap class-clearfix">
+                    <li>
+                        <span>LINE</span>
+                        <select>
+                            <option value="sanken_sim">Sanken SIM</option>
+                        </select>
+                    </li>
+                    <li>
+                        <span>LOCATION</span>
+                        <select>
+                            <option value="all">ALL</option>
+                        </select>
+                    </li>
+                    <li>
+                        <form id="id-searchID">
+                            <input type="text" class="class-trayID">
+                            <button type="submit" form="id-searchID" class="class-btnTrayID">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </form>
+                    </li>
+                </ul>
+                
+                <div class="class-searchTable">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="class-tDate">Date
+                                    <button class="class-calendar">
+                                        <i class="far fa-calendar-alt"></i>
+                                    </button>
+                                </th>
+
+                                <th class="class-tTrayID">Tray ID</th>
+
+                                <!-- filtering 클릭했을 때 th에 class-on 활성화 -->
+                                <th class="class-tMachine class-mFil <!--class-on-->">Machine
+                                    <i class="fas fa-filter"></i>
+                                    <div class="class-Mfilter">
+                                        <div class="class-searchM">
+                                            <form id="id-searchM">
+                                                <input type="text" class="class-machine">
+                                                <button type="submit" form="id-searchM" class="class-btnSearchM">
+                                                    <i class="fa fa-search"></i>
+                                                </button>
+                                            </form>
+                                        </div>
+
+                                        <ul class="class-filterList">
+                                            <!-- checked 상태일때 li에 class-act 활성화 -->
+                                            <li class="class-act">
+                                                <form>
+                                                    <input type="checkbox" id="id-machine01" name="machine01" checked="checked">
+                                                    <label for="id-machine01">Machine name 01</label>
+                                                </form>
+                                            </li>
+                                            <li>
+                                                <form>
+                                                    <input type="checkbox" id="id-machine02" name="machine02">
+                                                    <label for="id-machine02">Machine name 01</label>
+                                                </form>
+                                            </li>
+                                            <li>
+                                                <form>
+                                                    <input type="checkbox" id="id-machine03" name="machine03">
+                                                    <label for="id-machine03">Machine name 01</label>
+                                                </form>
+                                            </li>
+                                            <li>
+                                                <form>
+                                                    <input type="checkbox" id="id-machine04" name="machine04">
+                                                    <label for="id-machine04">Machine name 01</label>
+                                                </form>
+                                            </li>
+                                            <li>
+                                                <form>
+                                                    <input type="checkbox" id="id-machine05" name="machine05">
+                                                    <label for="id-machine05">Machine name 01</label>
+                                                </form>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </th>
+
+                                <th class="class-tAlarm class-aFil <!--class-on-->">
+                                    Alarm CH
+                                    <i class="fas fa-filter"></i>
+                                    <div class="class-Afilter">
+                                        <ul class="class-filterList">
+                                            <li class="class-act">
+                                                <form>
+                                                    <input type="checkbox" id="id-alarmCH01" name="alarmCH01" checked="checked">
+                                                    <label for="id-alarmCH01">Alarm CH 01</label>
+                                                </form>
+                                            </li>
+                                            <li>
+                                                <form>
+                                                    <input type="checkbox" id="id-alarmCH02" name="alarmCH02">
+                                                    <label for="id-alarmCH02">Alarm CH 02</label>
+                                                </form>
+                                            </li>
+                                            <li>
+                                                <form>
+                                                    <input type="checkbox" id="id-alarmCH03" name="alarmCH03">
+                                                    <label for="id-alarmCH03">Alarm CH 03</label>
+                                                </form>
+                                            </li>
+                                            <li>
+                                                <form>
+                                                    <input type="checkbox" id="id-alarmCH04" name="alarmCH04">
+                                                    <label for="id-alarmCH04">Alarm CH 04</label>
+                                                </form>
+                                            </li>
+                                            <li>
+                                                <form>
+                                                    <input type="checkbox" id="id-alarmCH05" name="alarmCH05">
+                                                    <label for="id-alarmCH05">Alarm CH 05</label>
+                                                </form>
+                                            </li>
+                                            <li>
+                                                <form>
+                                                    <input type="checkbox" id="id-alarmCH05" name="alarmCH05">
+                                                    <label for="id-alarmCH05">Alarm CH 05</label>
+                                                </form>
+                                            </li>
+                                            <li>
+                                                <form>
+                                                    <input type="checkbox" id="id-alarmCH05" name="alarmCH05">
+                                                    <label for="id-alarmCH05">Alarm CH 05</label>
+                                                </form>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="class-tDate">YYYY-MM-DD HH:MM:SS</td>
+                                <td class="class-tTrayID">Tray ID</td>
+                                <td class="class-tMachine">Machine</td>
+                                <td class="class-tAlarm">알람있음</td>
+                            </tr>
+                            <tr>
+                                <td class="class-tDate">YYYY-MM-DD HH:MM:SS</td>
+                                <td class="class-tTrayID">Tray ID</td>
+                                <td class="class-tMachine">Machine</td>
+                                <td class="class-tAlarm">알람있음</td>
+                            </tr>
+                            <tr>
+                                <td class="class-tDate">YYYY-MM-DD HH:MM:SS</td>
+                                <td class="class-tTrayID">Tray ID</td>
+                                <td class="class-tMachine">Machine</td>
+                                <td class="class-tAlarm">알람있음</td>
+                            </tr>
+                            <tr>
+                                <td class="class-tDate">YYYY-MM-DD HH:MM:SS</td>
+                                <td class="class-tTrayID">Tray ID</td>
+                                <td class="class-tMachine">Machine</td>
+                                <td class="class-tAlarm">알람있음</td>
+                            </tr>
+                            <tr>
+                                <td class="class-tDate">YYYY-MM-DD HH:MM:SS</td>
+                                <td class="class-tTrayID">Tray ID</td>
+                                <td class="class-tMachine">Machine</td>
+                                <td class="class-tAlarm">알람있음</td>
+                            </tr>
+                            <tr>
+                                <td class="class-tDate">YYYY-MM-DD HH:MM:SS</td>
+                                <td class="class-tTrayID">Tray ID</td>
+                                <td class="class-tMachine">Machine</td>
+                                <td class="class-tAlarm">알람있음</td>
+                            </tr>
+                            <tr>
+                                <td class="class-tDate">YYYY-MM-DD HH:MM:SS</td>
+                                <td class="class-tTrayID">Tray ID</td>
+                                <td class="class-tMachine">Machine</td>
+                                <td class="class-tAlarm">알람있음</td>
+                            </tr>
+                            <tr>
+                                <td class="class-tDate">YYYY-MM-DD HH:MM:SS</td>
+                                <td class="class-tTrayID">Tray ID</td>
+                                <td class="class-tMachine">Machine</td>
+                                <td class="class-tAlarm">알람있음</td>
+                            </tr>
+                            <tr>
+                                <td class="class-tDate">YYYY-MM-DD HH:MM:SS</td>
+                                <td class="class-tTrayID">Tray ID</td>
+                                <td class="class-tMachine">Machine</td>
+                                <td class="class-tAlarm">알람있음</td>
+                            </tr>
+                            <tr>
+                                <td class="class-tDate">YYYY-MM-DD HH:MM:SS</td>
+                                <td class="class-tTrayID">Tray ID</td>
+                                <td class="class-tMachine">Machine</td>
+                                <td class="class-tAlarm">알람있음</td>
+                            </tr>
+                            <tr>
+                                <td class="class-tDate">YYYY-MM-DD HH:MM:SS</td>
+                                <td class="class-tTrayID">Tray ID</td>
+                                <td class="class-tMachine">Machine</td>
+                                <td class="class-tAlarm">알람있음</td>
+                            </tr>
+                            <tr>
+                                <td class="class-tDate">YYYY-MM-DD HH:MM:SS</td>
+                                <td class="class-tTrayID">Tray ID</td>
+                                <td class="class-tMachine">Machine</td>
+                                <td class="class-tAlarm">알람있음</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <button class="class-btnClose">Close</button>
+            </div>
+            <!-- searchInner E -->
+        </div>
+        <!-- tray ID search pop-up E -->
+    </header>
+</section>
+<!-- top header E -->
+
+<!-- container S -->
+<section id="id-container" class="class-Tcontainer class-clearfix">
+    <!-- trayInformation S -->
+    <section class="class-trayInformation">
+        <section class="class-trayinfo">
+           <ul class="class-clearfix">
+               <li class="class-trayid class-clearfix">
+                   <h3>Tray ID</h3>
+                   <p class="class-ID">LBA00001</p>
+               </li>
+               <li class="class-processS class-clearfix">
+                   <h3>Process Status</h3>
+                   <p class="class-PS">CC</p>
+               </li>
+               <li class="class-startC class-clearfix">
+                   <h3>Start Charging</h3>
+                   <p class="class-SC">
+                        <span class="class-date">2018.03.15</span>
+                        <span class="class-time">11:30:22</span>
+                    </p>
+               </li>
+               <li class="class-terminateC class-clearfix">
+                   <h3>Terminate Charging</h3>
+                   <p class="class-TC">
+                        <span class="class-date">2018.03.15</span>
+                        <span class="class-time">11:30:22</span>
+                    </p>
+               </li>
+           </ul> 
+        </section>
+        <!-- trayinfo E -->
+        
+        <section class="class-traybutton">
+            <div class="class-ch1">
+                <form>
+                    <input type="checkbox" id="id-ch1" name="ch1">
+                    <label for="id-ch1">CH1</label>
+                </form>
+            </div>
+            <div class="class-ch2">
+                <form>
+                    <input type="checkbox" id="id-ch2" name="ch2" checked="checked">
+                    <label for="id-ch2">CH2</label>
+                </form>
+            </div>
+            <div class="class-ch3 class-chAsignal">
+                <form>
+                    <input type="checkbox" id="id-ch3" name="ch">
+                    <label for="id-ch3">CH3</label>
+                </form>
+            </div>
+        </section>
+        <!-- traybutton E -->
+        
+        <section class="class-trayAhistory">
+            <h3>Alarm History</h3>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th class="class-timestamp">Timestamp</th>
+                        <th class="class-alarmCH">Alarm CH</th>
+                        <th class="class-type">Type</th>
+                        <th class="class-description">Description</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td class="class-timestamp">Timestamp</td>
+                        <td class="class-alarmCH">Alarm CH</td>
+                        <td class="class-type">Type</td>
+                        <td class="class-description">Description</td>
+                    </tr>
+                    <tr>
+                        <td class="class-timestamp">Timestamp</td>
+                        <td class="class-alarmCH">Alarm CH</td>
+                        <td class="class-type">Type</td>
+                        <td class="class-description">Description</td>
+                    </tr>
+                    <tr>
+                        <td class="class-timestamp">Timestamp</td>
+                        <td class="class-alarmCH">Alarm CH</td>
+                        <td class="class-type">Type</td>
+                        <td class="class-description">Description</td>
+                    </tr>
+                    <tr>
+                        <td class="class-timestamp">Timestamp</td>
+                        <td class="class-alarmCH">Alarm CH</td>
+                        <td class="class-type">Type</td>
+                        <td class="class-description">Description</td>
+                    </tr>
+                    <tr>
+                        <td class="class-timestamp">Timestamp</td>
+                        <td class="class-alarmCH">Alarm CH</td>
+                        <td class="class-type">Type</td>
+                        <td class="class-description">Description</td>
+                    </tr>
+                    <tr>
+                        <td class="class-timestamp">Timestamp</td>
+                        <td class="class-alarmCH">Alarm CH</td>
+                        <td class="class-type">Type</td>
+                        <td class="class-description">Description</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </section>
+    <!-- trayInformation E -->
+    
+    <!-- tray chart S -->
+    <section class="class-trayChart">
+        <section class="class-chartinner">
+            <div><!-- chart area --></div>
+        </section>
+        <!-- chartinner E -->
+        
+        <section class="class-chartlegend">
+            <div><!-- legend area --></div>
+        </section>
+        <!-- chartlegend E -->
+        
+        <section class="class-CHinformation">
+            <table>
+                <thead>
+                    <tr>
+                        <th class="class-CH">CH</th>
+                        <th class="class-CS">충전시간</th>
+                        <th class="class-CSMax">충전속도&#40;Max&#41;</th>
+                        <th class="class-CSMin">충전속도&#40;Min&#41;</th>
+                        <th class="class-CSAVG">충전속도&#40;AVG&#41;</th>
+                        <th class="class-ICcharge">적분값&#40;충전량&#41;</th>
+                        <th class="class-similarity">유사도</th>
+                    </tr>
+                </thead>
+                
+                <tbody>
+                    <tr>
+                        <td class="class-CH">CH10</td>
+                        <td class="class-CS">86.21</td>
+                        <td class="class-CSMax">11.1</td>
+                        <td class="class-CSMin">6.3</td>
+                        <td class="class-CSAVG">7.8</td>
+                        <td class="class-ICcharge"></td>
+                        <td class="class-similarity"></td>
+                    </tr>
+                    <tr>
+                        <td class="class-CH">CH10</td>
+                        <td class="class-CS">86.21</td>
+                        <td class="class-CSMax">11.1</td>
+                        <td class="class-CSMin">6.3</td>
+                        <td class="class-CSAVG">7.8</td>
+                        <td class="class-ICcharge"></td>
+                        <td class="class-similarity"></td>
+                    </tr>
+                    <tr>
+                        <td class="class-CH">CH10</td>
+                        <td class="class-CS">86.21</td>
+                        <td class="class-CSMax">11.1</td>
+                        <td class="class-CSMin">6.3</td>
+                        <td class="class-CSAVG">7.8</td>
+                        <td class="class-ICcharge"></td>
+                        <td class="class-similarity"></td>
+                    </tr>
+                    <tr>
+                        <td class="class-CH">CH10</td>
+                        <td class="class-CS">86.21</td>
+                        <td class="class-CSMax">11.1</td>
+                        <td class="class-CSMin">6.3</td>
+                        <td class="class-CSAVG">7.8</td>
+                        <td class="class-ICcharge"></td>
+                        <td class="class-similarity"></td>
+                    </tr>
+                    <tr>
+                        <td class="class-CH">CH10</td>
+                        <td class="class-CS">86.21</td>
+                        <td class="class-CSMax">11.1</td>
+                        <td class="class-CSMin">6.3</td>
+                        <td class="class-CSAVG">7.8</td>
+                        <td class="class-ICcharge"></td>
+                        <td class="class-similarity"></td>
+                    </tr>
+                    <tr>
+                        <td class="class-CH">CH10</td>
+                        <td class="class-CS">86.21</td>
+                        <td class="class-CSMax">11.1</td>
+                        <td class="class-CSMin">6.3</td>
+                        <td class="class-CSAVG">7.8</td>
+                        <td class="class-ICcharge"></td>
+                        <td class="class-similarity"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <!-- CHinformation E -->
+    </section>
+    <!-- tray chart E -->
+</section>
+<!-- container E -->
+</body>
+</html>

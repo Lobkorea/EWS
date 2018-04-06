@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>EWS</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/common.css">
+    
+    <script src="js/jquery.1.12.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
+    <script src="js/fontawsome.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+
+ $(document).ready(function() {
+
+
+ });
+
+</script>
+
+<!-- top header S -->
+
+<section id="id-top" class="class-hdWrap">
+    <header id="id-header" class="class-header class-clearfix">
+        <h1 id="id-title" class="class-title">EWS</h1>
+
+        <div class="class-lineSelect class-clearfix">
+            <div class="class-lineSim">
+                <span>LINE</span>
+                <select>
+                    <option value="sanken_sim">Sanken SIM</option>
+                </select>
+            </div>
+            <div class="class-lineMachine">
+                <span>LOCATION</span>
+                <select>
+                    <option value="all">ALL</option>
+                </select>
+            </div>
+            <div class="class-searchTray">
+                <form id="id-trayID">
+                    <input type="text" class="class-trayID">
+                    <button class="class-btnTrayID">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <div class="class-langTime class-clearfix">
+            <select>
+                <option value="english">ENGLISH</option>
+            </select>
+            <p>
+                <span class="class-day">2017-11-13</span>
+                <span class="class-time">20&#58;47&#58;23</span>
+            </p>
+        </div>
+        
+        <!-- tray ID search pop-up S -->
+        <div class="class-searchPOPNone" >
+            <div class="class-searchInner">
+                <h4>Search Tray ID</h4>
+                
+                <ul class="class-selectWrap class-clearfix">
+                    <li>
+                        <span>LINE</span>
+                        <select>
+                            <option value="sanken_sim">Sanken SIM</option>
+                        </select>
+                    </li>
+                    <li>
+                        <span>LOCATION</span>
+                        <select>
+                            <option value="all">ALL</option>
+                        </select>
+                    </li>
+                    <li>
+                        <form id="id-searchID">
+                            <input type="text" class="class-trayID">
+                            <button type="submit" form="id-searchID" class="class-btnTrayID">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </form>
+                    </li>
+                </ul>
+                
+                <div class="class-searchTable">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="class-tDate">Date
+                                    <button class="class-calendar">
+                                        <i class="far fa-calendar-alt"></i>
+                                        <div id="datepicker">
+                                    </button>
+                                </th>
+
+                                <th class="class-tTrayID">Tray ID</th>
+
+                                <!-- filtering 클릭했을 때 th에 class-on 활성화 -->
+                                <th class="class-tMachine class-mFil <!--class-on-->">Machine
+                                    <i class="fas fa-filter"></i>
+                                    <div class="class-Mfilter">
+                                        <div class="class-searchM">
+                                            <form id="id-searchM">
+                                                <input type="text" class="class-machine">
+                                                <button type="submit" form="id-searchM" class="class-btnSearchM">
+                                                    <i class="fa fa-search"></i>
+                                                </button>
+                                            </form>
+                                        </div>
+
+                                        <ul class="class-filterList">
+                                            <!-- checked 상태일때 li에 class-act 활성화 -->
+                                            <li class="class-act">
+                                                <form>
+                                                    <input type="checkbox" id="id-machine01" name="machine01" checked="checked">
+                                                    <label for="id-machine01">Machine name 01</label>
+                                                </form>
+                                            </li>
+                                            <li>
+                                                <form>
+                                                    <input type="checkbox" id="id-machine02" name="machine02">
+                                                    <label for="id-machine02">Machine name 01</label>
+                                                </form>
+                                            </li>
+                                            <li>
+                                                <form>
+                                                    <input type="checkbox" id="id-machine03" name="machine03">
+                                                    <label for="id-machine03">Machine name 01</label>
+                                                </form>
+                                            </li>
+                                            <li>
+                                                <form>
+                                                    <input type="checkbox" id="id-machine04" name="machine04">
+                                                    <label for="id-machine04">Machine name 01</label>
+                                                </form>
+                                            </li>
+                                            <li>
+                                                <form>
+                                                    <input type="checkbox" id="id-machine05" name="machine05">
+                                                    <label for="id-machine05">Machine name 01</label>
+                                                </form>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </th>
+
+                                <th class="class-tAlarm class-aFil <!--class-on-->">
+                                    Alarm CH
+                                    <i class="fas fa-filter"></i>
+                                    <div class="class-Afilter">
+                                        <ul class="class-filterList">
+                                            <li class="class-act">
+                                                <form>
+                                                    <input type="checkbox" id="id-alarmCH01" name="alarmCH01" checked="checked">
+                                                    <label for="id-alarmCH01">Alarm CH 01</label>
+                                                </form>
+                                            </li>
+                                            <li>
+                                                <form>
+                                                    <input type="checkbox" id="id-alarmCH02" name="alarmCH02">
+                                                    <label for="id-alarmCH02">Alarm CH 02</label>
+                                                </form>
+                                            </li>
+                                            <li>
+                                                <form>
+                                                    <input type="checkbox" id="id-alarmCH03" name="alarmCH03">
+                                                    <label for="id-alarmCH03">Alarm CH 03</label>
+                                                </form>
+                                            </li>
+                                            <li>
+                                                <form>
+                                                    <input type="checkbox" id="id-alarmCH04" name="alarmCH04">
+                                                    <label for="id-alarmCH04">Alarm CH 04</label>
+                                                </form>
+                                            </li>
+                                            <li>
+                                                <form>
+                                                    <input type="checkbox" id="id-alarmCH05" name="alarmCH05">
+                                                    <label for="id-alarmCH05">Alarm CH 05</label>
+                                                </form>
+                                            </li>
+                                            <li>
+                                                <form>
+                                                    <input type="checkbox" id="id-alarmCH05" name="alarmCH05">
+                                                    <label for="id-alarmCH05">Alarm CH 05</label>
+                                                </form>
+                                            </li>
+                                            <li>
+                                                <form>
+                                                    <input type="checkbox" id="id-alarmCH05" name="alarmCH05">
+                                                    <label for="id-alarmCH05">Alarm CH 05</label>
+                                                </form>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td class="class-tDate">YYYY-MM-DD HH:MM:SS</td>
+                                <td class="class-tTrayID">Tray ID</td>
+                                <td class="class-tMachine">Machine</td>
+                                <td class="class-tAlarm">알람있음</td>
+                            </tr>
+                            <tr>
+                                <td class="class-tDate">YYYY-MM-DD HH:MM:SS</td>
+                                <td class="class-tTrayID">Tray ID</td>
+                                <td class="class-tMachine">Machine</td>
+                                <td class="class-tAlarm">알람있음</td>
+                            </tr>
+                            <tr>
+                                <td class="class-tDate">YYYY-MM-DD HH:MM:SS</td>
+                                <td class="class-tTrayID">Tray ID</td>
+                                <td class="class-tMachine">Machine</td>
+                                <td class="class-tAlarm">알람있음</td>
+                            </tr>
+                            <tr>
+                                <td class="class-tDate">YYYY-MM-DD HH:MM:SS</td>
+                                <td class="class-tTrayID">Tray ID</td>
+                                <td class="class-tMachine">Machine</td>
+                                <td class="class-tAlarm">알람있음</td>
+                            </tr>
+                            <tr>
+                                <td class="class-tDate">YYYY-MM-DD HH:MM:SS</td>
+                                <td class="class-tTrayID">Tray ID</td>
+                                <td class="class-tMachine">Machine</td>
+                                <td class="class-tAlarm">알람있음</td>
+                            </tr>
+                            <tr>
+                                <td class="class-tDate">YYYY-MM-DD HH:MM:SS</td>
+                                <td class="class-tTrayID">Tray ID</td>
+                                <td class="class-tMachine">Machine</td>
+                                <td class="class-tAlarm">알람있음</td>
+                            </tr>
+                            <tr>
+                                <td class="class-tDate">YYYY-MM-DD HH:MM:SS</td>
+                                <td class="class-tTrayID">Tray ID</td>
+                                <td class="class-tMachine">Machine</td>
+                                <td class="class-tAlarm">알람있음</td>
+                            </tr>
+                            <tr>
+                                <td class="class-tDate">YYYY-MM-DD HH:MM:SS</td>
+                                <td class="class-tTrayID">Tray ID</td>
+                                <td class="class-tMachine">Machine</td>
+                                <td class="class-tAlarm">알람있음</td>
+                            </tr>
+                            <tr>
+                                <td class="class-tDate">YYYY-MM-DD HH:MM:SS</td>
+                                <td class="class-tTrayID">Tray ID</td>
+                                <td class="class-tMachine">Machine</td>
+                                <td class="class-tAlarm">알람있음</td>
+                            </tr>
+                            <tr>
+                                <td class="class-tDate">YYYY-MM-DD HH:MM:SS</td>
+                                <td class="class-tTrayID">Tray ID</td>
+                                <td class="class-tMachine">Machine</td>
+                                <td class="class-tAlarm">알람있음</td>
+                            </tr>
+                            <tr>
+                                <td class="class-tDate">YYYY-MM-DD HH:MM:SS</td>
+                                <td class="class-tTrayID">Tray ID</td>
+                                <td class="class-tMachine">Machine</td>
+                                <td class="class-tAlarm">알람있음</td>
+                            </tr>
+                            <tr>
+                                <td class="class-tDate">YYYY-MM-DD HH:MM:SS</td>
+                                <td class="class-tTrayID">Tray ID</td>
+                                <td class="class-tMachine">Machine</td>
+                                <td class="class-tAlarm">알람있음</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <button class="class-btnClose">Close</button>
+            </div>
+            <!-- searchInner E -->
+        </div>
+        <!-- tray ID search pop-up E -->
+    </header>
+</section>
+<!-- top header E -->
+
+<!-- container S -->
+<section id="id-container" class="class-container">
+
+    <!-- progress S -->
+    <section id="id-alarm" class="class-alarm class-clearfix">
+        <div class="class-process1-01">
+            <p class="class-alarmTit">24 ea</p>
+            <p class="class-alarmTxt">Unresolved Alarms</p>
+        </div>
+        <div class="class-process1-02">
+            <p class="class-alarmTit">77 ea</p>
+            <p class="class-alarmTxt">Today Alarms</p>
+        </div>
+    </section>
+    <!-- progress E -->
+
+    <!-- locationStage S -->
+    <section id="id-locationStage" class="class-locationStage">
+        <div class="class-locationWrap class-clearfix">
+            <div class="class-equipment-01">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-02">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-03">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-04">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-05">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-06">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-07">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-08">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-09">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-10">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-11">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-12">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-13">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-14">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-15">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-16">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-17">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-18">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-19">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-20">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-21">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-22">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-23">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-24">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-25">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-26">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-27">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-28">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-29">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-30">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-31">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-32">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-33">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-34">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-35">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-36">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-37">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-38">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-39">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-40">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-41">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-42">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-43">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-44">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-45">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-46">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-47">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-48">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-49">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-50">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-51">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-52">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-53">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-54">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-55">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-56">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-57">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-58">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+
+
+            <div class="class-equipment-59">
+                <img src="img/equipment_01.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-60">
+                <img src="img/equipment_01.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-61">
+                <img src="img/equipment_01.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+
+
+            <div class="class-equipment-62">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-63">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-64">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-65">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-66">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-67">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-68">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-69">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-70">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-71">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-72">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-73">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-74">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-75">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-76">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-77">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-78">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-79">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-80">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+            <div class="class-equipment-81">
+                <img src="img/equipment_02.png" alt="equipment img">
+                <div class="class-tooltip">
+                    <p class="class-machine">Machine 10701</p>
+                    <p class="class-trayID">Tray ID AB00001</p>
+                </div>
+                <!-- signal alarm class / class-MR, class-IA, class-MA -->
+                <span class="class-signal"></span>
+            </div>
+        </div>
+        <!-- locationWrap E -->
+
+        <ul class="class-iconWrap clearfix">
+            <li>
+                <span class="class-iconMR"></span> Machine Running
+            </li>
+            <li>
+                <span class="class-iconIA"></span> Internal Alarm
+            </li>
+            <li>
+                <span class="class-iconMA"></span> Machine Alarm
+            </li>
+        </ul>
+    </section>
+    <!-- locationStage E -->
+
+    <!-- alarm by date S -->
+    <section id="id-alarmDate" class="class-alarmDate class-clearfix">
+        <!-- numMA S -->
+        <section id="id-numberMA" class="class-numMA">
+            <h3>Number of <span class="class-iconMA">Machine</span> Alarms by Date</h3>
+
+            <div class="class-graphWrap class-clearfix">
+                <div class="class-dateGraph"><!--img--></div>
+
+                <ul class="class-alarmList">
+                    <li>
+                        <p>Today</p>
+                        <p class="class-todayAlarm">05</p>
+                    </li>
+                    <li>
+                        <p>Weekly<br>accumulated<br>alarms</p>
+                        <p class="class-weekAlarm">15</p>
+                    </li>
+                    <li>
+                        <p>Monthly<br>accumulated<br>alarms</p>
+                        <p class="class-monthAlarm">09</p>
+                     </li>
+                </ul>
+            </div>
+        </section>
+        <!-- numMA E -->
+
+        <!-- numIA S -->
+        <section id="id-numberIA" class="class-numIA">
+            <h3>Number of <span class="class-iconIA">Internal</span> Alarms by Date</h3>
+
+            <div class="class-graphWrap class-clearfix">
+                <div class="class-dateGraph"><!--img--></div>
+
+                <ul class="class-alarmList">
+                    <li>
+                        <p>Today</p>
+                        <p class="class-todayAlarm">05</p>
+                    </li>
+                    <li>
+                        <p>Weekly<br>accumulated<br>alarms</p>
+                        <p class="class-weekAlarm">15</p>
+                    </li>
+                    <li>
+                        <p>Monthly<br>accumulated<br>alarms</p>
+                        <p class="class-monthAlarm">09</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- numIA  E --> 
+    </section>
+    <!-- alarm by date E -->
+
+    <!-- timeline S -->
+    <script>
+
+
+    var size = $(".class-timelineInner > ul > li").size();
+
+    $('.class-timeline01').click(function(){
+
+        $(".class-timelineInner > ul > li").each(function(index){
+            $(this).animate({ 
+                top: "+=103px",
+            },1000,function(){
+                    if(Number(size-1) == index){
+                        inter();
+                    }
+                }
+            );
+        });
+
+
+
+    });
+
+    function inter(){
+        $(".class-timelineInner > ul > li:last").one("webkitTransitionEnd otransitionend oTransitionEnd msTransitionEnd transitionend",
+            function(event) {
+                $(".class-timelineInner > ul > li:first").before('<li class="class-timeline01 class-warning class-on">				<div class="class-timerwrap class-timer01">					<p class="class-fontColor"><i class="fa fa-exclamation-triangle" ria-hidden="true"></i></p>					<p class="class-timer">20&#58;32&#58;27</p>				</div>								<div class="class-timelineToday">					<p class="class-todayTit">Alarm Occured</p>					p><span class="class-tBlue">901</span> UnloaderBF_Error&#91;14&#93; Unloader Buffer&#35;1</p>					<p>Stopper Down Sensor &#91;Unloader DVT&#35;1&#93;</p>					<p>it occuered <span class="class-tBlue">3 times</span> today</p>			</div>			</li>');
+        });
+    }
+
+
+
+    </script>
+    <section id="id-timeline" class="class-timeline">
+        <div class="class-timeTit class-clearfix">
+            <h3 onclick="javascript:sorting();">Timeline</h3>
+            <button>
+                <i class="far fa-calendar-alt"></i>
+            </button>
+
+            <div class="class-timelineHistory">
+                <ul class="class-clearfix">
+                    <li class="class-timelineHead01">
+                        <i class="fa fa-exclamation-triangle" aria-hidden="true" class=""></i>
+                    </li>
+                    <li class="class-timelineHead02">
+                        <i class="fas fa-bell" aria-hidden="true"></i>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- time_tit E -->
+
+        <div class="class-timelineInner">
+            <div class="class-TLtoday">
+                <!-- no-alarm -->
+            <!--
+                <div class="class-NoneAwrap">
+                    <div class="class-timelineAnone">
+                        <p class="class-noAlarmTxt">There is no alarm today</p>
+                    </div>
+                </div>
+            -->
+                <!-- no-alarm E -->
+                <h4>Today</h4>
+                <ul>
+                    <li class="class-clearfix class-warning class-on">
+                        <div class="class-timerwrap class-timer01">
+                            <p><i class="fas fa-bell" aria-hidden="true"></i></p>
+                            <p class="class-timer">20&#58;32&#58;27</p>
+                        </div>
+
+                        <div class="class-timelineAlarm">
+                            <p class="class-todayTit">Internal Alarm Occured</p>
+                            <p>Machine <span class="class-iconIA">70101</span> starts charging.</p>
+                        </div>
+                    </li>
+                    <li class="class-clearfix class-dashboard class-on">
+                        <div class="class-timerwrap class-timer02">
+                            <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></p>
+                            <p class="class-timer">19&#58;20&#58;27</p>
+                        </div>
+
+                        <div class="class-timelineAlarm">
+                            <p class="class-todayTit">Machine Alarm Occurred</p>
+                            <p>Alarm has occurred on the machine <span class="class-iconMA">70101.</span> &#91;Alarm details&#93;</p>
+                        </div>
+                    </li>
+                    <li class="class-clearfix class-dashboard class-on">
+                        <div class="class-timerwrap class-timer02">
+                            <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></p>
+                            <p class="class-timer">19&#58;20&#58;27</p>
+                        </div>
+
+                        <div class="class-timelineAlarm">
+                            <p class="class-todayTit">Machine Alarm Occurred</p>
+                            <p>Machine <span class="class-iconMA">70101.</span> starts charging.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="class-TLhistory">
+                <h4>March 15 2018</h4>
+                <ul>
+                    <li class="class-clearfix class-warning class-on">
+                        <div class="class-timerwrap class-timer01">
+                            <p><i class="fas fa-bell" aria-hidden="true"></i></p>
+                            <p class="class-timer">20&#58;32&#58;27</p>
+                        </div>
+
+                        <div class="class-timelineAlarm">
+                            <p class="class-todayTit">Internal Alarm Occured</p>
+                            <p>Machine <span class="class-iconIA">70101</span> starts charging.</p>
+                        </div>
+                    </li>
+                    <li class="class-clearfix class-dashboard class-on">
+                        <div class="class-timerwrap class-timer02">
+                            <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></p>
+                            <p class="class-timer">19&#58;20&#58;27</p>
+                        </div>
+
+                        <div class="class-timelineAlarm">
+                            <p class="class-todayTit">Machine Alarm Occurred</p>
+                            <p>Alarm has occurred on the machine <span class="class-iconMA">70101.</span> &#91;Alarm details&#93;</p>
+                        </div>
+                    </li>
+                    <li class="class-clearfix class-dashboard class-on">
+                        <div class="class-timerwrap class-timer02">
+                            <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></p>
+                            <p class="class-timer">19&#58;20&#58;27</p>
+                        </div>
+
+                        <div class="class-timelineAlarm">
+                            <p class="class-todayTit">Machine Alarm Occurred</p>
+                            <p>Machine <span class="class-iconMA">70101.</span> starts charging.</p>
+                        </div>
+                    </li>
+                    <li class="class-clearfix class-warning class-on">
+                        <div class="class-timerwrap class-timer01">
+                            <p class="class-fontColor"><i class="fas fa-bell" aria-hidden="true"></i></p>
+                            <p class="class-timer">20&#58;32&#58;27</p>
+                        </div>
+
+                        <div class="class-timelineAlarm">
+                            <p class="class-todayTit">Internal Alarm Occured</p>
+                            <p>Machine <span class="class-iconIA">70101</span> starts charging.</p>
+                        </div>
+                    </li>
+                    <li class="class-clearfix class-dashboard class-on">
+                        <div class="class-timerwrap class-timer02">
+                            <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></p>
+                            <p class="class-timer">19&#58;20&#58;27</p>
+                        </div>
+
+                        <div class="class-timelineAlarm">
+                            <p class="class-todayTit">Machine Alarm Occurred</p>
+                            <p>Alarm has occurred on the machine <span class="class-iconMA">70101.</span> &#91;Alarm details&#93;</p>
+                        </div>
+                    </li>
+                    <li class="class-clearfix class-dashboard class-on">
+                        <div class="class-timerwrap class-timer02">
+                            <p><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></p>
+                            <p class="class-timer">19&#58;20&#58;27</p>
+                        </div>
+
+                        <div class="class-timelineAlarm">
+                            <p class="class-todayTit">Machine Alarm Occurred</p>
+                            <p>Machine <span class="class-iconMA">70101.</span> starts charging.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- class-timelineInner E -->
+    </section>
+    <!-- timeline E -->
+
+</section>
+<!-- container E -->
+</body>
+</html>
