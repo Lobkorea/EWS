@@ -26,7 +26,7 @@ html { scrollbar-arrow-color: #efefef;
 ::-webkit-scrollbar-track {  background: none; }
 ::-webkit-scrollbar-thumb {  background: #4d4d4d;  }
 
-* {padding:0; margin:0; border-radius:4px; list-style:none; text-decoration:none; box-sizing:border-box;}
+* {padding:0; margin:0; border-radius:3px; list-style:none; text-decoration:none; box-sizing:border-box;}
 html {width:100%; height:100%;}
 body {width:100%; height:100%; background:#2a323c; color:#fff; font-family:'LG smart'; font-size:12px;}
 
@@ -45,7 +45,7 @@ select {height:30px; padding-left:10px; background:#323c48; color:#959595; borde
 .class-header .class-lineSelect > div {float:left; margin-right:20px;}
 .class-header .class-lineSelect span {font-size:16px; font-weight:600; color:#ccc; margin-right:10px;}
 .class-header .class-lineSelect .class-lineSim select {width:165px;}
-.class-header .class-lineSelect .class-lineMachine select {width:200px;}
+.class-header .class-lineSelect .class-lineLocation select {width:187px;}
 .class-header .class-lineSelect .class-searchTray {position:relative;}
 .class-trayID {width:200px; height:30px; padding-left:10px; color:#959595; border:none; background:#404750;}
 .class-btnTrayID {position:absolute; top:50%; right:10px; transform:translateY(-50%); color:#ccc;}
@@ -227,6 +227,8 @@ select {height:30px; padding-left:10px; background:#323c48; color:#959595; borde
 
     /* timeline S */
 .class-timeline {position:absolute; top:0; right:0; padding:5px; width:305px; height:902px; background:#323c48; box-shadow:-2px -2px 2px #262d37;}
+.class-timeline .class-timelineInner ul .class-off{display:none;}
+
 .class-timeTit {padding:5px; border-bottom:1px solid #586069;}
 .class-timeTit h3 {float:left; margin-right:10px;}
 .class-timeTit button {float:left; color:#fff;}
@@ -243,6 +245,7 @@ select {height:30px; padding-left:10px; background:#323c48; color:#959595; borde
 .class-timelineInner ul li .class-timerwrap p:first-child {margin-bottom:5px;}
 .class-timelineInner ul li .class-timelineAlarm {width:75%; line-height:1.8em;}
 .class-timelineInner ul li .class-timelineAlarm .class-todayTit {font-size:14px; color:#fff;}
+
     /* timeline E */
 
 /* index E */
