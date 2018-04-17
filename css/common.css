@@ -74,7 +74,8 @@ select {height:30px; padding-left:10px; background:#323c48; color:#959595; borde
 .class-searchTable .class-table .class-tr > th, .class-searchTable .class-table .class-tr > td {width:25%; margin-left:-3px; border-right:1px solid #4d5660; padding-left:10px;}
 .class-searchTable .class-table .class-tr > th:last-child, .class-searchTable .class-table .class-tr > td:last-child {border-right:none;}
 .class-searchTable .class-table .class-tr > th.class-on {background:linear-gradient(#000 10%, #20242a 30%);}
-.class-searchTable .class-table .class-tr > th > div {display:none; position:absolute; top:40px; left:0; width:100%; background:#24262d; border-radius:0; border:1px solid #7a9cd3;}
+.class-searchTable .class-table .class-tr .class-filter {display:none; position:absolute; top:40px; left:0; width:100%; background:#24262d; border-radius:0; border:1px solid #7a9cd3;}
+.class-searchTable .class-table .class-tr .class-filter.class-on {display:block;}
 .class-searchM {position:relative; width:100%; height:39px; border-bottom:1px solid #7a9cd3; padding:4px; border-radius:0;}
 .class-searchM input {width:100%; height:31px; vertical-align:top; border-radius:0; background:#404750; border:1px solid #5c626a;}
 .class-searchM .class-btnSearchM {position:absolute; top:50%; right:13px; transform:translateY(-50%);}
