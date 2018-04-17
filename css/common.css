@@ -111,6 +111,10 @@ select {height:30px; padding-left:10px; background:#323c48; color:#959595; borde
 .class-iconWrap {position:absolute; bottom:15px; right:20px;}
 .class-iconWrap li {float:left; margin-left:15px; color:#747d8a;}
 .class-iconWrap li span {display:inline-block; width:16px; height:16px; border-width:2px; border-style:solid; margin:-4px 5px 0 0; background:#272c33; vertical-align:middle; border-radius:50%;}
+.class-signal {position:absolute; top:6px; left:7px; width:74px; height:6px; border-radius:0;}
+.class-MR {background:#66d203;}
+.class-IA {background:#ffb22b;}
+.class-MA {background:#fc4b6c;}
 .class-iconMR {border-color:#66d203; color:#66d203;}
 .class-iconIA {border-color:#ffb22b; color:#ffb22b;}
 .class-iconMA {border-color:#fc4b6c; color:#fc4b6c;}
