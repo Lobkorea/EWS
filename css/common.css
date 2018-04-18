@@ -54,7 +54,7 @@ select {height:30px; padding-left:10px; background:#323c48; color:#959595; borde
 .class-header .class-langTime p {float:left; margin-left:30px; letter-spacing:0.03em;}
 
     /* pop */
-.class-searchPOP { position:fixed; top:50px; left:0; z-index:100; width:100%; height:calc(100% - 50px); background:rgba(255,255,255,0.2);}
+.class-searchPOP {display:none; position:fixed; top:50px; left:0; z-index:100; width:100%; height:calc(100% - 50px); background:rgba(255,255,255,0.2);}
 .class-searchPOPNone { display:none;}
 .class-searchInner {position:absolute; top:0%; left:50%; transform:translateX(-50%); width:720px; height:580px; padding:12px 18px; background:#20242a;}
 .class-searchInner h4 {line-height:1.4em; font-size:16px; font-weight:600; margin-bottom:10px;}
@@ -284,7 +284,7 @@ select {height:30px; padding-left:10px; background:#323c48; color:#959595; borde
         /* trayAhistory S */
 .class-trayAhistory {height:250px; padding:12px 12px 0px; font-size:14px;}
 .class-trayAhistory h3 {margin-bottom:12px;}
-table.class-table {height:205px;}
+table.class-table {width:100%; height:205px;}
 table.class-table .class-tr {width:100%;}
 table.class-table .class-thead {width:100%; padding-left:10px; padding-bottom:10px; border-bottom:2px solid #4d5660; text-align:left;}
 table.class-table .class-tbody {width:100%; padding-left:10px; height:175px; overflow:auto; color:#9fa2a7;}
